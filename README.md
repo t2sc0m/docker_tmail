@@ -34,7 +34,7 @@ tmail:
 ```
 ### You can pass additional arguments via environment variable MAIL_OPTS : 
 ```shell
-  MAIN_OPTS = --user = USER_NAME = USER_PASSWORD
+  MAIL_OPTS = --user = USER_NAME = USER_PASSWORD
 ```
 
 ### Server
