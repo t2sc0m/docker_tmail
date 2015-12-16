@@ -46,6 +46,7 @@ $ sudo docker-compose up -d
 * POP3 : Mail_Domain:110
 * USER : User_Name@Mail_Domain
 * PASS : User_Password
+
 ---
 
 * ref https://hub.docker.com/r/vimagick/tmail/
