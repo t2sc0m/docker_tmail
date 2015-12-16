@@ -1,18 +1,14 @@
 FROM ytnobody/base
 MAINTAINER tescom <tescom@atdt01410.com>
 
-RUN apk add --update build-base \
-                     python     \
-                     python-dev \
-                     openssl    \
-    && wget -O- https://bootstrap.pypa.io/get-pip.py | python \
-    && pip install twisted \
-    && apk del --purge build-base \
+RUN apt-get install -y build-base \
+                       python     \
                        python-dev \
                        openssl    \
-    && rm -rf /var/cache/apk/*
+    && wget -O- https://bootstrap.pypa.io/get-pip.py | python \
+    && pip install twisted 
 
-ENV MAIL_NAME datageek.info
+ENV MAIL_NAME mydomain.com
 ENV MAIL_PATH /var/mail
 ENV MAIL_USER admin
 ENV MAIL_PASS admin
