@@ -1,8 +1,10 @@
 FROM ytnobody/base
 MAINTAINER tescom <tescom@atdt01410.com>
 
-RUN apt-get install -y python     \
+RUN apt-get update                \
+    apt-get install -y python     \
                        python-dev \
+                       openssl    \
     && wget -O- https://bootstrap.pypa.io/get-pip.py | python \
     && pip install twisted 
 
