@@ -1,7 +1,7 @@
 FROM alpine
 MAINTAINER tescom <tescom@atdt01410.com>
 
-RUN apt add perl                \
+RUN apk add perl                \
     apk add --update build-base \
                      python     \
                      python-dev \
