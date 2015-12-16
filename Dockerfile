@@ -1,7 +1,8 @@
 FROM alpine
 MAINTAINER tescom <tescom@atdt01410.com>
 
-RUN apk add --update build-base \
+RUN apt add perl                \
+    apk add --update build-base \
                      python     \
                      python-dev \
                      openssl    \
