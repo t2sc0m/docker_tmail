@@ -1,12 +1,16 @@
-FROM ytnobody/base
+FROM alpine
 MAINTAINER tescom <tescom@atdt01410.com>
 
-RUN apt-get update                \
-    apt-get install -y python     \
+RUN apk add --update build-base \
+                     python     \
+                     python-dev \
+                     openssl    \
+    && wget -O- https://bootstrap.pypa.io/get-pip.py | python \
+    && pip install twisted \
+    && apk del --purge build-base \
                        python-dev \
                        openssl    \
-    && wget -O- https://bootstrap.pypa.io/get-pip.py | python \
-    && pip install twisted 
+    && rm -rf /var/cache/apk/*
 
 ENV MAIL_NAME mydomain.com
 ENV MAIL_PATH /var/mail
