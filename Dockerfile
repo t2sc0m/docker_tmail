@@ -19,7 +19,7 @@ ENV MAIL_USER admin
 ENV MAIL_PASS admin
 ENV MAIL_OPTS=
 
-VOLUME /var/mail
+VOLUME /tmp/mail
 EXPOSE 25 110
 
 CMD twistd -n mail --smtp=tcp:25 \
