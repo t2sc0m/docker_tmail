@@ -14,7 +14,7 @@ RUN apk add --update build-base \
     && rm -rf /var/cache/apk/*
 
 ENV MAIL_NAME mydomain.com
-ENV MAIL_PATH /var/mail
+ENV MAIL_PATH /tmp/mail
 ENV MAIL_USER admin
 ENV MAIL_PASS admin
 ENV MAIL_OPTS=
